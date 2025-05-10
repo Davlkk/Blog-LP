@@ -2,16 +2,19 @@ body{
     background-color: rgb(30, 30, 30);
 }
 
+
 .banner {
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
 
-    
+
+   
     .img-banner{
         width: 100vw;
         height: 80vh;
+
 
         img{
             width: 100%;
@@ -24,12 +27,61 @@ body{
         position: absolute;
         height: 30vh;
 
+
         img{
             width: auto;
             height: 100%;
         }
     }
 }
+
+.container{
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0);
+
+    .arrow{
+        position: absolute;
+        width: 20px;
+        height: auto;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .left{
+        margin-right: 2vw;
+        left: 0;
+    }
+    .right{
+        transform: rotate(180deg);
+        right: 0;
+    }
+}
+
+.artists{
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+
+    .ind-art{
+        object-fit: cover;
+        width: 15rem;
+        height: auto;
+        margin: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        transition: 0.3s ease;
+    }
+    .ind-art:hover{
+        cursor: pointer;
+        filter: brightness(70%);
+    }
+}
+
 
 .articles{
     margin-top: 50px;
@@ -42,8 +94,9 @@ body{
     width: 100%;
     background-color: transparent;
     color: white;
-    transition: 0.4s ease; 
+    transition: 0.4s ease;
     box-shadow: 0px 0px 40px 1px rgba(255, 255, 255, 0.044);
+
 
     .card-body {
         flex-grow: 1;
@@ -52,9 +105,11 @@ body{
         justify-content: space-between;
     }
 
+
     .card-text {
         flex-grow: 1;
     }
+
 
     .card-img{
         width: 100%;
@@ -64,10 +119,6 @@ body{
             width: 100%;
             height: auto;
             transition: 0.4s ease;
-        }
-
-        img:hover{
-            width: 110%;
         }
     }
 
@@ -79,66 +130,34 @@ body{
 .card:hover{
     box-shadow: 0px 0px 40px 1px  #ffffff24;
 }
+.card img:hover{
+    transform: scale(1.1);
+}
 
-.newsletter{ 
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    background-color: #c0c0c0;
-    height: 10vh;
+.newsletter-card{
+    color: white;
+    background-color: #000000;
 
-    .black-plate{
-        display: grid;
-        align-items: center;
-        justify-content: space-around;
-        grid-template-columns: auto auto auto;
-        background-color: #262626;
-        width: 80vw;
-        border-radius: 5px;
-    }
-    .icon{
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        background-color: #262626;
-        border: none;
-        border-radius: 5px;
-        border: transparent solid;
-        transition: ease 0.4s;
-        color: white;
-        width: 5vw;
-        height: 5vh;
-    }
-    .email-newsletter{
-        background-color: #262626;
-        border-radius: 5px;
-        border: transparent solid;
-        transition: ease 0.4s;
-        color: white;
-        width: 70vw;
-        height: 5vh;
-        padding: 10px;
-    }
-    .btn{
-        font-size: 1rem;
-        width: 5vw;
-        height: 5vh;
-        display: inherit;
-        align-items: center;
-        justify-content: center;
-        border-radius: 5px;
-        border: transparent solid;
-        transition: ease 0.4s;
-        color: white;
-        background-color: #262626;
-    }
-    .btn:hover{
-        background-color: green;
-    }
+    .input-email{
+        color: inherit;
+        background-color: rgb(30, 30, 30);
+        border-style: none;
+        outline-style: none;
+        height: 4vh;
+        margin-top: 5px;
 
-
-    .email-newsletter:hover{
-        border: rgb(255, 255, 255) 2px solid;
+    }
+    .button{
+        color: inherit;
+        background-color: rgb(30, 30, 30);
+        height: 4vh;
+        border-style: none;
+        outline-style: none;
+        margin-top: 5px;
+        transition: 0.4s ease;
+    }
+    .button:hover{
+        background-color: rgba(199, 199, 199, 0.367);
     }
 }
 
@@ -159,6 +178,7 @@ body{
         }
     }
 }
+
 
 .footerFooter{
     height: 3vh;
