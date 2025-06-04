@@ -7,7 +7,7 @@ app.controller("Rest", function($scope, $http) {
         });
 });
 
-app.controller("DetalheCtrl", function($scope, $http, $location) {
+app.controller("DetalheCtrl", function($scope, $http) {
     function getQueryParam(param) {
         var params = new URLSearchParams(window.location.search);
         return params.get(param);
