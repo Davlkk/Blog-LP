@@ -86,12 +86,15 @@ body{
 .articles{
     margin-top: 50px;
     margin-bottom: 50px;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 .card{
-    width: 100%;
+    width: 80vw;
+
+    height: auto;
     background-color: transparent;
     color: white;
     transition: 0.4s ease;
