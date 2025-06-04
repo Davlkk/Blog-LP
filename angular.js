@@ -1,7 +1,23 @@
-angular.module('blog', []);
+var app = angular.module("blog", []);
 
-angular.module('blog').controller('Rest', function($scope, $http){
-    $http.get('https://api-fake-blog.onrender.com/postagens/').success(function(data){
-        $scope.postagens = data;
-    })
-})
+app.controller("Rest", function($scope, $http) {
+    $http.get("https://api-fake-blog.onrender.com/postagens")
+        .then(function(response) {
+            $scope.postagens = response.data;
+        });
+});
+
+app.controller("DetalheCtrl", function($scope, $http, $location) {
+    function getQueryParam(param) {
+        var params = new URLSearchParams(window.location.search);
+        return params.get(param);
+    }
+
+    var id = getQueryParam("id");
+
+    $http.get("https://api-fake-blog.onrender.com/postagens")
+        .then(function(response) {
+            var postagens = response.data;
+            $scope.postagem = postagens[id];
+        });
+});

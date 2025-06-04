@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app="blog">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>artigo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="../artigos/cssArt.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="angular.js"></script>
+    <link rel="stylesheet" href="cssArt.css">
+</head>
+<body>
+    <div class="header row-12">
+        <nav class="navbar p-2">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../pgInicial.html">
+                    <img src="../src/museu do rock MINI LOGO.svg" alt="logo" width="auto" height="20">
+                </a>
+                <a class="navbar-brand" href="../pgInicial.html" style="color: white;">Home</a>
+            </div>
+          </nav>
+    </div>
+
+    <div class="banner container-fluid" ng-controller="DetalheCtrl">
+        <div class="img-banner container-fluid">
+          <img class="art art-1 img-fluid" ng-src="https://api-fake-blog.onrender.com/postagens/{{postagem.thumbImage}}">
+        </div>
+      </div>
+
+      <div class="body-text container-fluid text-center text-wrap" ng-controller="DetalheCtrl">
+        <div class="title">
+            <h1 class="fw-bold">{{postagem.title}}</h1>
+        </div>
+        <br>
+        <div class="text">
+                <p class="textArt">{{postagem.description}}</p>
+        </div>
+      </div>
+
+      <div class="comment-area form-floating container-fluid">
+
+        <hr id="line-comment">
+
+        <div class="comments container-fluid text-center">
+            <h1 class="fs-3">Comentários</h1>
+            <div class="real-comments"> 
+
+            </div>
+            <br>
+              <form id="comentario-form">
+                <h1 class="fs-6">Comente o que achou do artigo!</h1>
+                <br>
+                <div class="input-comment col-sm-12 container-fluid text-center">
+                  <textarea id="text-area-comment" placeholder="Comentário" name="text-area-comment" class="inputs col-lg-7 col-md-12 container-fluid"></textarea>
+
+                  <input id="name-comment" type="text" placeholder="Nome" class="inputs col-lg-7 col-md-12 container-fluid">
+
+                  <input id="email-comment" type="email" placeholder="E-mail" class="inputs col-lg-7 col-md-12 container-fluid">
+                </div>
+              
+                <div class="btns m-3 text-center">
+                  <button type="reset" class="btn btn-success col-lg-1 col-md-10 container-fluid">Enviar</button>
+
+                  <button type="reset" class="btn btn-danger col-lg-1 col-md-10 container-fluid">Cancelar</button>
+                </div>
+              </form>
+        </div>
+      </div>
+
+      <div class="footer container-fluid">
+        <div class="logoFooter">
+          <img class="img-fluid" src="../src/museu do rock MINI LOGO.svg">
+        </div>
+      </div>
+  
+      <div class="footerFooter container-fluid text-center">
+        <div class="url">
+            <p>Museu do Rock - © 2025 - Nenhum direito reservado.</p>
+        </div>
+      </div>
+
+      <script src="artigosJs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
